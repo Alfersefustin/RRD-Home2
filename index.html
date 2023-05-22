@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <title>RRD</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h5>WHEELS</h5>
+        <i>
+            <p>Lorem ipsum dolor sit amet, consecttur adipiscing elit, sed do eiusmod tempor incididunt <br>
+                ut labore et dolore magna aliqua. Ut enim ad minum veniam, quis nostrud exercitation.
+            </p>
+        </i>
+    </div>
+    <!-- carousel starts -->
+
+        <div class="carousel">
+            <button href="" class='prev'>&laquo;</button>
+            <div href="#"class="item active">
+                <div class="image">
+                    <img class="img" src="./Images/wgu.png" alt="wgu">    
+                </div>
+                <div class="content">
+                    <div>17-INCH CAST ALUMINUM WHEEL, FULLY<br>PAINTED SILVER LITHO
+                    </div>
+                    <div>
+                        <p class="mt-mb">Standard on TOuring FWD</p>
+                    </div>
+                    <div>(WGU)</div>
+                </div>
+            </div>
+            <div href="#" class="item">
+                <div class="image">
+                    <img class="img" src="./Images/wjr.png" alt="wgu">
+                </div>
+                <div class="content">
+                    <div>17-INCH CAST ALUMINUM WHEEL, FULLY<br>PAINTED SILVER LITHO
+                    </div>
+                    <div>
+                        <p class="mt-mb">Standard on TOuring FWD</p>
+                    </div>
+                    <div>(WGU)</div>
+                </div>
+            </div>
+            <div href="#" class="item">
+                <div class="image">
+                    <img class="img" src="./Images/wp6.png" alt="wgu">
+                </div>
+                <div class="content">
+                    <div>17-INCH CAST ALUMINUM WHEEL, FULLY<br>PAINTED SILVER LITHO
+                    </div>
+                    <div>
+                        <p class="mt-mb">Standard on TOuring FWD</p>
+                    </div>
+                    <div>(WGU)</div>
+                </div>
+            </div>
+            <button href="#" id='next' class='next'>&raquo;</button>
+        </div>
+
+    <!-- carousel ends -->
+
+</body>
+
+<script>
+$('.carousel').on('click', 'button', function() {
+
+  if($(this).hasClass("next") ){
+    var active = $('.carousel .item.active').removeClass('active');
+    active.next().addClass('active');
+ }else if($(this).hasClass("prev")){
+    var active = $('.carousel .item.active').removeClass('active');
+    active.prev().addClass('active');
+ }
+  else{
+        $('.carousel .item.active').removeClass('active');
+       $(this).addClass('active');
+  }
+  console.log($(this).hasClass("next"))
+});
+</script>
+</html>
